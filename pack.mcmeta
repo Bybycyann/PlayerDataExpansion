@@ -1,0 +1,12 @@
+{
+    "pack": {
+        "description": {
+            "text": "[lib]玩家数据拓展.",
+            "color": "green"
+        },
+        "pack_format": 95,
+        "supported_formats": [71,95],
+        "min_format": 71,
+        "max_format": 95
+    }
+}
