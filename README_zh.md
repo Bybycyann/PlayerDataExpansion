@@ -2,11 +2,13 @@
 
 [English](./README.md) | 简体中文
 
-> 该数据包为每个玩家在Storage中创建了额外的存储空间, 在保持常态性能较好的前提下通过简单函数调用实现数据的写入和读出, 并含有数据缓存机制, 避免了 1tick 内使用 data 指令频繁调用玩家数据导致的高额开销.
+## 概览
+
+该数据包为每个玩家在Storage中创建了额外的存储空间, 在保持常态性能较好的前提下通过简单函数调用实现数据的写入和读出, 并含有数据缓存机制, 避免了 1tick 内使用 data 指令频繁调用玩家数据导致的高额开销.
 
 ## 命令存储格式
 
-```js
+```json
 Storage pde:io
 --------------------------------------------------
 "player": {
@@ -68,7 +70,7 @@ function #pde:data.(or(只读模式)|rw(读写模式)|cache(更新缓存并读�
   ```mcfunction
   # As player:
   
-  function #pde:data.or {player:"this"}
+  function #pde:data.or {player: "this"}
   	data modify storage xxx:xxx uuid set from storage pde:io output[-1].data.CONST.uuid
   	data modify storage xxx:xxx name set from storage pde:io output[-1].data.CONST.name
   ```
@@ -76,7 +78,7 @@ function #pde:data.(or(只读模式)|rw(读写模式)|cache(更新缓存并读�
 - **向索引为2的玩家存储中修改数据和写入数据**
 
   ```mcfunction
-  function #pde:data.rw {player:2}
+  function #pde:data.rw {player: 2}
   	data modify storage pde:io input[-1].example set value "test"
   	data modify storage pde:io input[-1] merge {aaa: "bbb"}
   ```
@@ -84,7 +86,7 @@ function #pde:data.(or(只读模式)|rw(读写模式)|cache(更新缓存并读�
 - **向自己的存储中写入新数据并立即更新**
 
   ```mcfunction
-  function #pde:data.rw {player:"this"}
+  function #pde:data.rw {player: "this"}
   	data modify storage pde:io input[-1] merge {new: 1b}
   function #pde:data.update
   ```

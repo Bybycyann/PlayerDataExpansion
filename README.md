@@ -8,7 +8,7 @@ This datapack creates additional storage space for each player within a shared s
 
 ## Command Storage Format
 
-```js
+```json
 Storage pde:io
 --------------------------------------------------
 "player": {
@@ -70,7 +70,7 @@ function #pde:data.(or(Read-only mode)|rw(Read-write mode)|cache(Update cache an
 ```mcfunction
 # As player:
 
-function #pde:data.or {player:"this"}
+function #pde:data.or {player: "this"}
 	data modify storage xxx:xxx uuid set from storage pde:io output[-1].data.CONST.uuid
 	data modify storage xxx:xxx name set from storage pde:io output[-1].data.CONST.name
 ```
@@ -78,7 +78,7 @@ function #pde:data.or {player:"this"}
 **Modify Data for Player Index 2**
 
 ```mcfunction
-function #pde:data.rw {player:2}
+function #pde:data.rw {player: 2}
     data modify storage pde:io input[-1].example set value "test"
     data modify storage pde:io input[-1] merge {aaa: "bbb"}
 ```
@@ -86,7 +86,7 @@ function #pde:data.rw {player:2}
 **Write New Data to Own Storage and Update Immediately**
 
 ```mcfunction
-function #pde:data.rw {player:"this"}
+function #pde:data.rw {player: "this"}
 	data modify storage pde:io input[-1] merge {new: 1b}
 function #pde:data.update
 ```
