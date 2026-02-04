@@ -5,8 +5,24 @@
             "color": "green"
         },
         "pack_format": 95,
-        "supported_formats": [71,95],
-        "min_format": 71,
-        "max_format": 95
+        "supported_formats": [20,99],
+        "min_format": 20,
+        "max_format": 99
+    },
+    "overlays": {
+        "entries": [
+            {
+                "directory": "readme_update-24w21a-bef",
+                "formats": [20,44],
+                "min_format": 20,
+                "max_format": 44
+            },
+            {
+                "directory": "text_component-25w02a-bef",
+                "formats": [45,61],
+                "min_format": 45,
+                "max_format": 61
+            }
+        ]
     }
 }

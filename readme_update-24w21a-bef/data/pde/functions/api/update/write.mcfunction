@@ -1,0 +1,1 @@
+$data modify storage pde:io player.data."$(index)" set from storage pde:io input[-1].data

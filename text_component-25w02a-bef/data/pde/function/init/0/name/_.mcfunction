@@ -1,0 +1,1 @@
+$data modify storage pde:io stack[-1].text set value $(text)

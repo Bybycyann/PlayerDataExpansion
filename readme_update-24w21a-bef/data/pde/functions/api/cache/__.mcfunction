@@ -1,0 +1,1 @@
+$data modify storage pde:io player.data."$(index)".CACHE set from storage pde:io output[-1].data.CACHE

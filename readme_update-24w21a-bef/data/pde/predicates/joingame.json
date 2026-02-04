@@ -1,0 +1,8 @@
+{
+  "condition": "minecraft:inverted",
+  "term": {
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {"pde.join": 0}
+  }
+}

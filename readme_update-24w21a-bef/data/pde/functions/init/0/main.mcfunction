@@ -2,7 +2,7 @@
 # 新建档案
 # ```
 tag @s add temp
-execute summon minecraft:text_display run function pde:init/0/name
+execute summon minecraft:text_display run function pde:init/0/name/main
 tag @s remove temp
 
 execute store result score @s pde.index run scoreboard players add #index pde.index 1
