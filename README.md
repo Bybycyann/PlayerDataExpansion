@@ -79,15 +79,15 @@ function #pde:data.or {player: "this"}
 
 ```mcfunction
 function #pde:data.rw {player: 2}
-    data modify storage pde:io input[-1].example set value "test"
-    data modify storage pde:io input[-1] merge {aaa: "bbb"}
+    data modify storage pde:io input[-1].data.example set value "test"
+    data modify storage pde:io input[-1].data merge {aaa: "bbb"}
 ```
 
 **Write New Data to Own Storage and Update Immediately**
 
 ```mcfunction
 function #pde:data.rw {player: "this"}
-	data modify storage pde:io input[-1] merge {new: 1b}
+	data modify storage pde:io input[-1].data merge {new: 1b}
 function #pde:data.update
 ```
 

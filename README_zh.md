@@ -79,15 +79,15 @@ function #pde:data.(or(只读模式)|rw(读写模式)|cache(更新缓存并读�
 
   ```mcfunction
   function #pde:data.rw {player: 2}
-  	data modify storage pde:io input[-1].example set value "test"
-  	data modify storage pde:io input[-1] merge {aaa: "bbb"}
+  	data modify storage pde:io input[-1].data.example set value "test"
+  	data modify storage pde:io input[-1].data merge {aaa: "bbb"}
   ```
 
 - **向自己的存储中写入新数据并立即更新**
 
   ```mcfunction
   function #pde:data.rw {player: "this"}
-  	data modify storage pde:io input[-1] merge {new: 1b}
+  	data modify storage pde:io input[-1].data merge {new: 1b}
   function #pde:data.update
   ```
 
