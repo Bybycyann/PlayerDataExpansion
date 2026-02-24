@@ -12,7 +12,7 @@
     "overlays": {
         "entries": [
             {
-                "directory": "readme_update-24w21a-bef",
+                "directory": "rename_update-24w21a-bef",
                 "formats": [20,44],
                 "min_format": 20,
                 "max_format": 44
