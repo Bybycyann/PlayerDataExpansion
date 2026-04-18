@@ -1,0 +1,23 @@
+{
+  "condition": "minecraft:value_check",
+  "value": {
+    "type": "minecraft:score",
+    "score": "pde.index",
+    "target": {
+      "type": "minecraft:context",
+      "target": "this"
+    }
+  },
+  "range": {
+    "min": {
+      "type": "minecraft:storage",
+      "storage": "pde:io",
+      "path": "output[-1].index"
+    },
+    "max": {
+      "type": "minecraft:storage",
+      "storage": "pde:io",
+      "path": "output[-1].index"
+    }
+  }
+}

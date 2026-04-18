@@ -95,7 +95,7 @@ function #pde:data.(or(只读模式)|rw(读写模式)|cache(更新缓存并读�
 
   ```mcfunction
   function #pde:data.cache {player: "this"}
-  	data get modify storage pde:io output[-1].data.CACHE.data.Health
+  	data get storage pde:io output[-1].data.CACHE.data.Health
   ```
 
   
