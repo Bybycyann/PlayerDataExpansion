@@ -1,3 +1,3 @@
 data modify entity @s text set value {selector:"@a[tag=temp,limit=1]"}
-data modify storage pde:io stack[-1].name set from entity @s text.hover_event.name
+data modify storage pde:io stack[-1].name set from entity @s text.insertion
 kill @s
